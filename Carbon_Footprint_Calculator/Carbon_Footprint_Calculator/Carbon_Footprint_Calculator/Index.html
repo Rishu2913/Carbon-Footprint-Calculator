@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carbon Footprint Calculator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div id="tsparticles"></div>
+
+<div class="container">
+
+<h1>🌍 Carbon Footprint Calculator</h1>
+<p>Estimate your weekly carbon emissions</p>
+
+<form id="calculatorForm">
+
+<label>
+Miles driven per week
+<input type="number" id="miles" placeholder="Enter miles" required>
+</label>
+
+<label>
+Electricity usage (kWh / month)
+<input type="number" id="electricity" placeholder="Enter kWh" required>
+</label>
+
+<label>
+Flights per year
+<input type="number" id="flights" placeholder="Enter flights" required>
+</label>
+
+<label>
+Diet Type
+<select id="diet">
+<option value="low">Vegan / Vegetarian</option>
+<option value="medium">Mixed</option>
+<option value="high">Meat-heavy</option>
+</select>
+</label>
+
+<button type="submit">Calculate Footprint</button>
+
+</form>
+
+<div id="result">
+<strong>Your Carbon Footprint</strong>
+<br>
+<span class="result-value">0 kg CO₂</span>
+</div>
+
+<div class="charts">
+
+<div class="chart-card">
+<canvas id="chart1"></canvas>
+</div>
+
+<div class="chart-card">
+<canvas id="chart2"></canvas>
+</div>
+
+<div class="chart-card">
+<canvas id="chart3"></canvas>
+</div>
+
+</div>
+
+<div id="suggestions">
+
+<h2>🌱 How You Can Reduce Your Carbon Footprint</h2>
+
+<div id="suggestionList"></div>
+
+</div>
+
+<!-- ABOUT SECTION -->
+
+<div id="about">
+
+<h2>📘 About This Calculator</h2>
+
+<p>
+This Carbon Footprint Calculator estimates the amount of carbon dioxide (CO₂) emissions produced by daily activities.
+It uses information about transportation, electricity consumption, flights, and diet to estimate weekly carbon emissions.
+The goal is to help users understand how their lifestyle affects the environment.
+</p>
+
+<h3>📊 Understanding the Graphs</h3>
+
+<div class="about-grid">
+
+<div class="about-card">
+<h4>🚗 Carbon Emissions Breakdown</h4>
+<p>
+The bar chart shows emissions produced from driving, electricity, flights, and diet.
+It helps users identify which activity contributes the most to their carbon footprint.
+</p>
+</div>
+
+<div class="about-card">
+<h4>⚡ Renewable vs Non-Renewable Energy</h4>
+<p>
+The pie chart shows the proportion of renewable and non-renewable electricity.
+Renewable energy includes solar, wind, and hydropower, which produce very low carbon emissions.
+Non-renewable energy comes from fossil fuels like coal, oil, and gas.
+</p>
+</div>
+
+<div class="about-card">
+<h4>🌍 Transport vs Lifestyle Impact</h4>
+<p>
+The line chart compares emissions from transportation (driving and flights) with lifestyle emissions
+such as electricity consumption and diet.
+</p>
+</div>
+
+</div>
+
+<h3>🌱 Renewable Energy</h3>
+
+<p>
+Renewable energy comes from natural sources that are continuously replenished such as sunlight, wind, water,
+and geothermal heat. These energy sources produce very little greenhouse gas emissions.
+</p>
+
+<h3>🏭 Non-Renewable Energy</h3>
+
+<p>
+Non-renewable energy comes from fossil fuels like coal, oil, and natural gas.
+These resources release large amounts of carbon dioxide when burned and are a major contributor to climate change.
+</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
